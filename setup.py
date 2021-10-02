@@ -1,12 +1,18 @@
 from setuptools import setup
 
+with open('README.md') as f:
+    long_description = f.read()
+
 setup(
     name='sshcopyid',
-    version='0.0.0',
-    description='Simplified replication of the linux ssh-copy-id cli for windows',
+    version='0.0.2',
+    description='Simplified replication of the linux ' +
+    'ssh-copy-id cli for windows',
+    long_description_content_type='text/markdown',
+    long_description=long_description,
     author='Meena (Menas) Erian',
     author_email="menas@portacode.com",
-    #python_requires=[],
+    # python_requires=[],
     url='https://github.com/meena-erian/ssh-copy-id',
     scripts=['cli/cli.py'],
     entry_points={
@@ -29,6 +35,5 @@ setup(
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: System :: Networking'
-
     ]
 )

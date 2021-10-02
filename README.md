@@ -16,6 +16,21 @@ On a windows OS, make sure you have python3 installed, and then install `sshcopy
 pip install sshcopyid
 ```
 
+## Syntax
+```
+usage: ssh-copy-id [-h] [-p PORT] target
+
+Copy current user's ssh keys to a remote machine. 
+(This CLI is meant for use only under the windows platform)
+
+positional arguments:
+  target   username@host, The username and hostname/ip of the remote host
+
+optional arguments:
+  -h, -?   print this help
+  -p PORT  The ssh port number of the remote machine
+```
+
 ## Contributing
 
 - Fork the project and clone locally.

@@ -10,7 +10,8 @@ class SafeParser(ArgumentParser):
 
 def main():
     parser = SafeParser(
-        description='Copy current user\'s ssh keys to a remote machine',
+        description='Copy current user\'s ssh keys to a remote machine' +
+        "\n(This CLI is meant for use only under the windows platform)",
         add_help=False
     )
     group = parser.add_mutually_exclusive_group()
@@ -29,7 +30,7 @@ def main():
         help="username@host, The username and hostname/ip of the remote host"
     )
     #parser.add_argument('-i', dest='[identity_file]')
-    parser.add_argument('-p', dest='port')
+    parser.add_argument('-p', dest='port', help='The ssh port number of the remote machine')
     #parser.add_argument('-F', dest='alternative ssh_config file')
     args = parser.parse_args()
     cmd = 'type $env:USERPROFILE\.ssh\id_rsa.pub | ssh '
