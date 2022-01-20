@@ -35,8 +35,8 @@ def main():
     else:
         parser.print_help()
     cmd += " 'mkdir -p .ssh " \
-        + "& touch .ssh/authorized_keys" \
-        + "& cat >> .ssh/authorized_keys'"
+        + "&& touch .ssh/authorized_keys" \
+        + "&& cat >> .ssh/authorized_keys'"
     cmd = "powershell -Command \"" + cmd + "\""
     os.system(cmd)
     print("Done\nNow try " + sshcmd +

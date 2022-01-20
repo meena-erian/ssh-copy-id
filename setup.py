@@ -5,7 +5,7 @@ with open('README.md') as f:
 
 setup(
     name='sshcopyid',
-    version='0.0.4',
+    version='0.0.5',
     description='Simplified replication of the linux ' +
     'ssh-copy-id cli for windows',
     long_description_content_type='text/markdown',
